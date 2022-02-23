@@ -1,0 +1,34 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Exo+2:ital,wght@0,300;1,100&family=Inconsolata:wght@300;500&display=swap');
+    </style>
+<h3 ><b>{{aim}}</b></h3>
+<div class="container">
+	<!-- code here -->
+	<div class="card">
+		<div class="card-image">	
+			<h2 style="font-family: 'Inconsolata', monospace;" class="card-heading">
+				Hey Welcome<br>
+				<small>Remaind Me</small>
+			</h2>
+		</div>
+		<form [formGroup]="loginForm" class="card-form" (ngSubmit)="login()">
+								<div class="input">
+				<input type="text" name="userid" formControlName="userid" id="uid" class="input-field" placeholder="UserId" >
+			
+			</div>
+			<div style="color: red;" *ngIf="(this.loginForm.get('userid')?.touched || this.loginForm.get('userid')?.dirty) && this.loginForm.get('userid')?.errors">Invalid UserId</div>
+						<div class="input">
+				<input type="password" name="pswd" formControlName="pswd"  id="pswd" class="input-field"  placeholder="Password" >
+			
+			</div>
+			<div style="color: red;" *ngIf="(this.loginForm.get('pswd')?.touched || this.loginForm.get('pswd')?.dirty) && this.loginForm.get('pswd')?.errors">Invalid UserId</div>
+
+			<div class="action">
+        <button  type="submit" style="margin-left: 130px;margin-bottom: 10px;"class="cool-button">LOGIN</button>
+			</div>
+      <div>
+        <p>You Don't Have An Acccount<a routerLink="register">Register</a></p>
+      </div>
+		</form>
+	</div>
+</div>

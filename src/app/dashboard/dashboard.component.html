@@ -1,0 +1,45 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Exo+2:ital,wght@0,300;1,100&family=Inconsolata:wght@300;500&display=swap');
+</style>
+<div class="new">
+    <!-- code here -->
+    <div class="card">
+        <div class="card-image">
+            <h2 style="font-family: 'Inconsolata', monospace;" class="card-heading">
+               WELCOME {{user}}
+            </h2>
+        </div>
+        <form class="card-form" (ngSubmit)="event()">
+
+            <div class="input">
+                <input type="text" name="userid" [(ngModel)]="userid" id="userid2" class="input-field"
+                    placeholder="UserId">
+
+            </div>
+            <div class="input">
+                <input type="password" name="pswd" [(ngModel)]="pswd" id="pswd2" class="input-field"
+                    placeholder="Password">
+
+            </div>
+            <div>
+                <div class="input">
+                        <input  type="date" name="date" [(ngModel)]="date" id="date" class="input-field"
+                        placeholder="Date of Event">
+
+    
+                </div>
+                <div class="input">
+
+                    <input type="text" name="newevents" [(ngModel)]="newevents" id="newevents" class="input-field"
+                        placeholder="whats new Event">
+
+                </div>
+                <div class="action">
+                    <button type="submit" style="margin-left: 130px;margin-bottom: 10px;" class="cool-button">Add
+                        Event</button>
+                    -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
